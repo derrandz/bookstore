@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/lib/bootstrap/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-overrides.css')
+
+  body(ng-app='bookstore')
+    nav.navbar.navbar-default
+      .navbar-header
+        a.navbar-brand(href='#') Bookstore.io
+        ul.nav.navbar-nav
+          li.active
+            a(href='#') Home
+          li
+            a(href='#') About
+
+    ng-view
+
+  //- Dependencies
+  script(type='text/javascript', src='lib/angular/angular.min.js')
+  script(type='text/javascript', src='lib/angular-route/angular-route.min.js')
+
+  //- My modules
+  script(type='text/javascript', src='app/app.module.js')
+  script(type='text/javascript', src='app/app.route.js')
