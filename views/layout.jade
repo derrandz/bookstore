@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body(ng-app='bookstore')
+    ng-view
+
+  //- Dependencies
+  script(type='text/javascript', src='lib/angular/angular.min.js')
+
+  //- My modules
+  script(type='text/javascript', src='app/app.module.js')
