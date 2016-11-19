@@ -2,10 +2,18 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/lib/bootstrap/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-overrides.css')
+
   body(ng-app='bookstore')
-    //- navbar
+    nav.navbar.navbar-default
+      .navbar-header
+        a.navbar-brand(href='#') Bookstore.io
+        ul.nav.navbar-nav
+          li.active
+            a(href='#') Home
+          li
+            a(href='#') About
     ng-view
 
   //- Dependencies
